@@ -50,6 +50,8 @@ final class RocketChatWebhookChannel
             throw CouldNotSendNotification::missingFrom();
         }
 
+        $this->rocketChat->setToken($from);
+
         try {
             $this->sendMessage($to, $message);
         } catch (ClientException $exception) {

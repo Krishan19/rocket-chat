@@ -46,6 +46,18 @@ final class RocketChat
     }
 
     /**
+     * Set RocketChat token.
+     *
+     * @param  string  $token
+     * @return $this
+     */
+    public function setToken(string $token): self
+    {
+        $this->token = $token;
+        return $this;
+    }
+
+    /**
      * Returns default channel id or name.
      *
      * @return string|null
